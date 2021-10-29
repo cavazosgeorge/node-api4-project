@@ -12,10 +12,10 @@ module.exports = (err, req, res, next) => {
     });
   }
 
-  if (process.env.NODE_ENV === "PRODUCTION") {
+  if (process.env.NODE_ENV === "PRODUCTION ") {
     let error = { ...err };
 
-    error.message = err.messge;
+    error.message = err.message;
 
     res.status(error.statusCode).json({
       success: false,
