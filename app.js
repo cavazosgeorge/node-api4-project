@@ -19,8 +19,10 @@ process.on("uncaughtException", (err) => {
 app.use(express.json());
 
 // IMPORTING ALL ROUTES
+const users = require("./routes/users");
 
 // USE ROUTES
+app.use("/api/v1", users);
 
 // HANDLE UNHANDLED ROUTES
 
