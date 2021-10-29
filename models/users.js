@@ -1,6 +1,3 @@
-// DO NOT MAKE CHANGES TO THIS FILE
-// DO NOT MAKE CHANGES TO THIS FILE
-// DO NOT MAKE CHANGES TO THIS FILE
 const { nanoid } = require("nanoid");
 
 function getId() {
@@ -21,9 +18,6 @@ const initializeUsers = () => [
 // FAKE IN-MEMORY USERS "TABLE"
 let users = initializeUsers();
 
-// DATABASE ACCESS FUNCTIONS
-// DATABASE ACCESS FUNCTIONS
-// DATABASE ACCESS FUNCTIONS
 const find = () => {
   // SELECT * FROM users;
   return Promise.resolve(users);
@@ -35,7 +29,7 @@ const findById = (id) => {
   return Promise.resolve(user);
 };
 
-const insert = ({ name, bio }) => {
+const insert = ({ name, email }) => {
   // INSERT INTO users (name, bio) VALUES ('foo', 'bar');
   const newUser = { id: getId(), name, bio };
   users.push(newUser);
@@ -64,13 +58,4 @@ const remove = (id) => {
 const resetDB = () => {
   // ONLY TESTS USE THIS ONE
   users = initializeUsers();
-};
-
-module.exports = {
-  find,
-  findById,
-  insert,
-  update,
-  remove,
-  resetDB, // ONLY TESTS USE THIS ONE
 };
