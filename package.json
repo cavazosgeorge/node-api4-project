@@ -4,7 +4,7 @@
   "description": "In this challenge, you will build a simple Express app and deploy it to Heroku.",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "SET NODE_ENV=PRODUCTION & nodemon app",
     "server": "nodemon app.js"
   },
   "repository": {
@@ -17,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/cavazosgeorge/node-api4-project/issues"
   },
-  "homepage": "https://github.com/cavazosgeorge/node-api4-project#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
